@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "6000:6000"
+    environment:
+      - EXCHANGE_RATE_API_KEY=${EXCHANGE_RATE_API_KEY}
+
